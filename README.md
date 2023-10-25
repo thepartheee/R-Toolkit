@@ -12,6 +12,7 @@ Feature Engineering
 Machine Learning
 Contributing
 License
+
 :bulb: Introduction
 
 This repository serves as a comprehensive guide to R Programming focused primarily on the following categories:
@@ -21,15 +22,18 @@ Visualization
 Packages
 Feature Engineering
 Machine Learning
+
 :mortar_board: Learning Tips
 
 Here you'll find random tips and tricks that'll make your journey in R Programming easier and more fun.
 
 Learning Resources
 FAQs
+
 :art: Visualization
 
 Explore various types of data visualizations you can create using R.
+
 
 
 :package: Packages
@@ -37,9 +41,11 @@ Explore various types of data visualizations you can create using R.
 Learn about the must-know R packages for efficient data manipulation and statistical analysis.
 
 
+
 :wrench: Feature Engineering
 
 Everything you need to know about feature engineering in R.
+
 
 
 :robot: Machine Learning
@@ -47,9 +53,11 @@ Everything you need to know about feature engineering in R.
 Get to grips with applying machine learning algorithms in R.
 
 
+
 :handshake: Contributing
 
 Feel free to open a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
 
 :page_with_curl: License
 
