@@ -4,32 +4,29 @@
 #=================================================================
 
 # Change Log
-# Version: 1.0.0    Author: Parthiban Kannan  Date: -
-# Description: Under Construction
+# Version: 1.0.0    Author: Parthiban Kannan  Date: 03-NOV-2023
+# Description: Fundamental implementation of Group By with aggregate Function
 #=================================================================
-
 
 # Load Data
 df <- as.data.frame(HairEyeColor)
 head(df)
 
-# 1. Single-Variable Group 
-# Average of Frequency Grouped by Hair
-# Group by Single Variables
+# 1. Group By One Variable
+# Average of Frequency Grouped by Hair Feature
 aggregate(
   x=Freq ~ Hair, 
   data=df, 
   FUN=mean)
 
-# 2. Multi-Variable Group 
+# 2. Group By Multiple Variables 
 # Sum of Frequency Grouped by Hair then Eye
-# Group by Multiple Variables
 aggregate(
   x = Freq ~ Hair+Eye, 
   data = df, 
   FUN = sum)
 
-# 3. Group Conditions 
+# 3. Group By Conditions 
 # Apply Groups by Conditions
 aggregate(
   x = Freq ~ Hair, 
@@ -37,14 +34,15 @@ aggregate(
   FUN = sum, 
   subset = (Freq < 10))
 
-# 4. Missing Values 
-# Handling Null Values
-# default omit - only if entire row is NA
+# 4. Missing Values Action
+# default is na.omit - only if entire row is NA
+# na.pass - just passes the NA values to result
+# na.fail - throws error if NA values are there
 aggregate(
   x = Freq ~ Hair, 
   data = df, 
   FUN = sum, 
-  na.action = na.omit)
+  na.action = na.fail)
 
 
 # 5. DROP 
@@ -63,6 +61,8 @@ print(result)
 # there is only null result
 
 
+# Note: We will check out how to Group Time Periods later
+# while covering under Time Series Analysis
 
 
 
